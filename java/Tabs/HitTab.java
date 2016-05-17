@@ -114,41 +114,41 @@ public class HitTab extends Fragment {
                             } else {
                                 if (isOut(h)) {
                                     if (h.type == "net") {
-                                        ++net;
+                                        ++netp2;
                                     } else {
                                         if (isTooLong(x, h)) {
-                                            ++dlzka;
+                                            ++dlzkap2;
                                         }
                                         if (badWidth(y, h)) {
-                                            ++sirka;
+                                            ++sirkap2;
                                         }
                                     }
                                 }
                                 if (h.winner)
-                                    ++win;
+                                    ++winp2;
                                 boolean jeDalsi = false;
                                 if (v.list.size() >= count + 2) {//count je idenx teda ho zvacsit o 2
                                     jeDalsi = true;
                                 }
                                 if (wasLeft(h, (int) y, 0)) {
-                                    ++left;
+                                    ++leftp2;
                                     if (jeDalsi && wasRight(v.list.get(count + 1), (int) y, 0)) {
-                                        ++inside;
+                                        ++insidep2;
                                     }
                                 }
                                 if (wasMid(h, (int) y)) {
-                                    ++mid;
+                                    ++midp2;
                                     if (jeDalsi && wasRight(v.list.get(count + 1), (int) y, 0)) {
-                                        ++inside;
+                                        ++insidep2;
                                     }
                                 }
                                 if (wasRight(h, (int) y, 0)) {
-                                    ++right;
+                                    ++rightp2;
                                     if (jeDalsi && wasRight(v.list.get(count + 1), (int) y, 0)) {
-                                        ++lon;
+                                        ++lonp2;
                                     }
                                     if (jeDalsi && wasLeft(v.list.get(count + 1), (int) y, 0)) {
-                                        ++cros;
+                                        ++crosp2;
                                     }
                                 }
                             }
@@ -160,16 +160,16 @@ public class HitTab extends Fragment {
         }
 
         stats.add(String.format("%-14s    :    %14s", m.p1, m.p2));
-        stats.add(String.format("%-14s Winner  %14s", Integer.toString(win), Integer.toString(winp2) ));
-        stats.add(String.format("%-16s   Net   %16s", Integer.toString(net), Integer.toString(netp2) ));
-        stats.add(String.format("%-14s Out-long %13s", Integer.toString(dlzka), Integer.toString(dlzkap2) ));
-        stats.add(String.format("%-14s Out-side %13s", Integer.toString(sirka), Integer.toString(sirkap2) ));
-        stats.add(String.format("%-14s Long-line %12s", Integer.toString(lon), Integer.toString(lonp2) ));
-        stats.add(String.format("%-15s  Cross  %15s", Integer.toString(cros), Integer.toString(crosp2) ));
-        stats.add(String.format("%-14s Inside-out %11s", Integer.toString(inside), Integer.toString(insidep2) ));
-        stats.add(String.format("%-14s Area: Right %10s", Integer.toString(right), Integer.toString(rightp2) ));
-        stats.add(String.format("%-11s Area: Middle %9s", Integer.toString(mid), Integer.toString(midp2) ));
-        stats.add(String.format("%-14s Area: Left %12s", Integer.toString(left), Integer.toString(leftp2) ));
+        stats.add(String.format("%-14s Winner  %14s", Integer.toString(win), Integer.toString(winp2)));
+        stats.add(String.format("%-16s   Net   %16s", Integer.toString(net), Integer.toString(netp2)));
+        stats.add(String.format("%-14s Out-long %13s", Integer.toString(dlzka), Integer.toString(dlzkap2)));
+        stats.add(String.format("%-14s Out-side %13s", Integer.toString(sirka), Integer.toString(sirkap2)));
+        stats.add(String.format("%-14s Long-line %12s", Integer.toString(lon), Integer.toString(lonp2)));
+        stats.add(String.format("%-15s  Cross  %15s", Integer.toString(cros), Integer.toString(crosp2)));
+        stats.add(String.format("%-14s Inside-out %11s", Integer.toString(inside), Integer.toString(insidep2)));
+        stats.add(String.format("%-14s Area: Right %10s", Integer.toString(right), Integer.toString(rightp2)));
+        stats.add(String.format("%-11s Area: Middle %9s", Integer.toString(mid), Integer.toString(midp2)));
+        stats.add(String.format("%-14s Area: Left %12s", Integer.toString(left), Integer.toString(leftp2)));
 
         nastavText(rootView);
         return rootView;

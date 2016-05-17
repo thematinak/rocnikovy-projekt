@@ -67,14 +67,14 @@ public class HitMap extends Fragment {
                     for (HitParcelable h : v) {
                         if (h.type.equals(uder)) {
                             Paint p = new Paint(Color.BLACK);
-                            if (v.list.get(0).out || v.list.get(0).type == "net")
+                            if (h.out || h.type == "net")
                                 p.setColor(Color.RED);
-                            if (v.list.get(0).winner)
+                            if (h.winner)
                                 p.setColor(Color.GREEN);
                             if(count %2 == 0) {
-                                cv.drawCircle(v.list.get(0).x, v.list.get(0).y, 10, p);
+                                cv.drawCircle(h.x, h.y, 10, p);
                             }else{
-                                cv2.drawCircle(v.list.get(0).x, v.list.get(0).y, 10, p);
+                                cv2.drawCircle(h.x, h.y, 10, p);
                             }
                         }
                         ++count;
@@ -84,8 +84,8 @@ public class HitMap extends Fragment {
         }
         ImageView i = (ImageView) rootView.findViewById(R.id.mapaP1);
         i.setImageBitmap(bmp);
-        i = (ImageView) rootView.findViewById(R.id.mapaP2);
-        i.setImageBitmap(bmp2);
+        ImageView im = (ImageView) rootView.findViewById(R.id.mapaP2);
+        im.setImageBitmap(bmp2);
 
 
         return rootView;

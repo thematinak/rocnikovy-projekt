@@ -31,6 +31,7 @@ public class PlaceholderFragment extends Fragment {
                 f = new ServeTab();
                 break;
             case 2:
+
                 b.putString("uder", MainActivity.TYPE_SERVE);
                 f = new HitMap();
                 break;

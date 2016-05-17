@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/new_game"
+        android:title="@string/new_game"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_save"
+        android:title="@string/menu_save"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_delete"
+        android:title="@string/menu_delete"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_load"
+        android:title="@string/menu_load"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_undo"
+        android:enabled="false"
+        android:title="@string/menu_undo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_statistics"
+        android:title="@string/title_activity_statistics"
+        app:showAsAction="never" />
+
+</menu>

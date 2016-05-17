@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Graf_Rel_Lout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/Graph_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/Graph_img"
+                android:layout_below="@+id/Graph_name"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tennis_court"
+                android:layout_marginBottom="50dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

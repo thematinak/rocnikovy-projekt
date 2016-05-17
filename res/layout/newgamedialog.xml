@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:useDefaultMargins="true">
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/p0name"
+        android:layout_above="@+id/p1name"
+        android:layout_toRightOf="@+id/p0name"
+        android:layout_alignRight="@+id/submitNewGameDialog"
+        android:layout_alignEnd="@+id/submitNewGameDialog"
+        android:layout_gravity="center_horizontal"
+        android:layout_column="1"
+        android:layout_row="0"
+        android:text="P1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serve:"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_column="2"
+        android:layout_row="0" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup"
+        android:layout_above="@+id/submitNewGameDialog"
+        android:layout_column="3"
+        android:layout_row="0"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P1"
+            android:id="@+id/serve0"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P2"
+            android:id="@+id/serve1"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2:"
+        android:layout_alignBaseline="@+id/p1name"
+        android:layout_alignBottom="@+id/p1name"
+        android:layout_toLeftOf="@+id/p1name"
+        android:layout_toStartOf="@+id/p1name"
+        android:layout_column="0"
+        android:layout_row="1"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1name"
+        android:layout_above="@+id/radioGroup"
+        android:layout_toRightOf="@+id/p0name"
+        android:layout_alignRight="@+id/submitNewGameDialog"
+        android:layout_alignEnd="@+id/submitNewGameDialog"
+        android:layout_gravity="center_horizontal"
+        android:layout_column="1"
+        android:layout_row="1"
+        android:text="P2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of sets"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1:"
+        android:layout_alignBaseline="@+id/p0name"
+        android:layout_alignBottom="@+id/p0name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_column="0"
+        android:layout_row="0" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/rbnofs1"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/rbnofs2"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/rbnofs3"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go!"
+        android:id="@+id/submitNewGameDialog"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_row="3"
+        android:layout_column="2" />
+
+</GridLayout>

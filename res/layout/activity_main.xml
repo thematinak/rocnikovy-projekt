@@ -1,0 +1,184 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="#025f22">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Score"
+        android:id="@+id/txtskore"
+        android:layout_row="0"
+        android:layout_column="4"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forhand"
+        android:id="@+id/btForhand"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Backhand"
+        android:id="@+id/btBackhand"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For. Volly"
+        android:id="@+id/btFvolly"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btForhand"
+        android:layout_toEndOf="@+id/btForhand"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back. volly"
+        android:id="@+id/btBvolly"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btBackhand"
+        android:layout_toStartOf="@+id/btBackhand"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smash"
+        android:id="@+id/btSmash"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btFvolly"
+        android:layout_toEndOf="@+id/btFvolly"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="slyze"
+        android:id="@+id/btSlize"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btBvolly"
+        android:layout_toStartOf="@+id/btBvolly"
+        android:enabled="true"
+        android:textSize="10dp"
+        android:onClick="nastavTypUderu" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kurt"
+        android:background="@drawable/tennis_court"
+        android:layout_above="@+id/btForhand"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtskore"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="P1"
+        android:id="@+id/twp1"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="P2"
+        android:id="@+id/twp2"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="2dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="net"
+        android:id="@+id/btnet"
+        android:textSize="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btSmash"
+        android:layout_toEndOf="@+id/btSmash"
+        android:onClick="nastavNet"
+        android:nestedScrollingEnabled="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="winner shot"
+        android:id="@+id/btwshot"
+        android:textSize="10dp"
+        android:onClick="nastavWiner"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btSlize"
+        android:layout_toStartOf="@+id/btSlize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P1gemscore"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:text="0"
+        android:layout_alignBottom="@+id/twp1"
+        android:layout_toRightOf="@+id/twp1"
+        android:layout_toEndOf="@+id/twp1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P2gemscore"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:text="0"
+        android:layout_alignBottom="@+id/twp2"
+        android:layout_toLeftOf="@+id/twp2"
+        android:layout_toStartOf="@+id/twp2" />
+
+</RelativeLayout>

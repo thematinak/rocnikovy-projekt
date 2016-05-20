@@ -138,12 +138,16 @@ public class MainActivity extends AppCompatActivity {
      * tu bude dialog na statisky resp dialogy
      */
     private void statistic() {
-        Intent intent = new Intent(MainActivity.this, Statistika.class);
-        onPause();
-        ImageView kurt = (ImageView) findViewById(R.id.kurt);
-        intent.putExtra("vyska", (float) kurt.getHeight());
-        intent.putExtra("sirka", (float) kurt.getWidth());
-        startActivity(intent);
+        if (match != null) {
+            Intent intent = new Intent(MainActivity.this, Statistika.class);
+            onPause();
+            ImageView kurt = (ImageView) findViewById(R.id.kurt);
+            intent.putExtra("vyska", (float) kurt.getHeight());
+            intent.putExtra("sirka", (float) kurt.getWidth());
+            startActivity(intent);
+        }else{
+            Toast.makeText(getApplicationContext(), "need a game to analyse", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -243,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
      * dialog ulozenie hry
      */
     private void saveGame() {
-        if (playable) {
+        if (match != null) {
             final File parentfile = this.getFilesDir();
             final Dialog dialog = new Dialog(MainActivity.this);
             dialog.setContentView(R.layout.savegame);
@@ -264,6 +268,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+        }else {
+            Toast.makeText(getApplicationContext(), "You have no data to be saved!", Toast.LENGTH_LONG).show();
         }
     }
 

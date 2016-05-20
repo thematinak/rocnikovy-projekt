@@ -67,6 +67,7 @@ public class HitMap extends Fragment {
                     for (HitParcelable h : v) {
                         if (h.type.equals(uder)) {
                             Paint p = new Paint(Color.BLACK);
+                            p.setAlpha(100);
                             if (h.out || h.type == "net")
                                 p.setColor(Color.RED);
                             if (h.winner)

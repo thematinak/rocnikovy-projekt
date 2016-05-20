@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.martin.rocnikovyprojekt.MainActivity;
 import com.example.martin.rocnikovyprojekt.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class ServeTab extends Fragment {
         float x = intent.getFloatExtra("sirka", -1);
         float y = intent.getFloatExtra("vyska", -1);
         ScrollView s = (ScrollView) rootView.findViewById(R.id.scroll_bar);
-        s.getLayoutParams().height =(int) y+20;
+        s.getLayoutParams().height = (int) y + 20;
         //1 first serve
         float in = 0, inp2 = 0;
         int max = 0, maxp2 = 0;         //mam
@@ -161,8 +162,12 @@ public class ServeTab extends Fragment {
                 }
             }
         }
+        if (maxp2 == 0)
+            maxp2 = 1;
+        if (max == 0)
+            max = 1;
         stats.add(String.format("%-14s    :    %14s", m.p1, m.p2));
-        stats.add(String.format("%2.2f %-5s   1st Serve   %5s %2.2f ", (in * 100 / max), " ", " ", ((float) ((int) (inp2 * 1000 / maxp2)) / 10)));
+        stats.add(String.format("%2.2f %-5s   1st Serve   %5s %2.2f ", (in * 100 / max), " ", " ", (inp2 * 100 / maxp2)));
         stats.add(String.format("%-14s   aces  %14s", Integer.toString(aces), Integer.toString(acesp2)));
         stats.add(String.format("%-9s Double folts %9s", Integer.toString(Dfolts), Integer.toString(Dfoltsp2)));
         stats.add(String.format("%-16s   out   %16s", Integer.toString(out), Integer.toString(outp2)));

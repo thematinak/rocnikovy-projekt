@@ -119,7 +119,7 @@ public class ServeTab extends Fragment {
                     } else {
                         if (!v.secServ)
                             ++inp2;
-                        ++max;
+                        ++maxp2;
                         if (l.get(0).winner) {
                             ++acesp2;
                         }
